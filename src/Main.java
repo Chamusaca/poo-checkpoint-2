@@ -5,6 +5,16 @@ public class Main {
         Cidade cidade2 = new Cidade("São Jorge", "21/06/1987");
         Cidade cidade3 = new Cidade("Cavalcante", "30/07/1963");
 
+        Regiao listacidades = new Regiao ("Chapada dos Veadeiros");
+
+        listacidades.addCidade(cidade1);
+        listacidades.addCidade(cidade2);
+        listacidades.addCidade(cidade3);
+
+        listacidades.listarCidades();
+
+        listacidades.getCidade();
+
         Cachoeira cachoeira1 = new Cachoeira("Catarata dos Couros", cidade1, true,
                 false, true, "Médio", 2.5, true);
         Cachoeira cachoeira2 = new Cachoeira("Almécegas", cidade2, true,
@@ -13,8 +23,13 @@ public class Main {
                 false, true, "Fácil", 0.7, true);
 
         Trilha trilha1 = new Trilha("Morro da Baleia", cidade1, true, false, true, 7.6, 640, "Médio");
-        Trilha trilha2 = new Trilha("Parque Nacional", cidade2, false, true, true, 11.7, 430, "Médio");
+        Trilha trilha2 = new Trilha("Parque Nacional", cidade1, false, true, true, 11.7, 430, "Médio");
         Trilha trilha3 = new Trilha("Paredão", cidade3, true, false, true, 7.6, 570, "Difícil");
+
+        cidade1.addTrilha(trilha1);
+        cidade1.addTrilha(trilha2);
+
+        cidade1.listarTrilhas();
 
         Caverna caverna1 = new Caverna("Buracão", cidade2, true, false, true, "Difícil", 4.3, false);
         Caverna caverna2 = new Caverna("Poço da Luz", cidade3, true, true, true, "Fácil", 1.2, true);

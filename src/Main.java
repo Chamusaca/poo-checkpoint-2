@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DataException {
 
         Cidade cidade1 = new Cidade("Alto Paraíso", "14/03/1968");
         Cidade cidade2 = new Cidade("São Jorge", "21/06/1987");
@@ -14,6 +14,8 @@ public class Main {
         listacidades.listarCidades();
 
         listacidades.getCidade();
+
+//        listacidades.validaEscolhaUsuario();
 
         Cachoeira cachoeira1 = new Cachoeira("Catarata dos Couros", cidade1, true,
                 false, true, "Médio", 2.5, true);

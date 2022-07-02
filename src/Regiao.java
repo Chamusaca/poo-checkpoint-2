@@ -13,16 +13,23 @@ public class Regiao {
     }
 
     //Método para adicinas as cidades nas lista de cidades e para o usuário poder escolher qual cidade gostaria de ver as atrações
-    public void getCidade (){
+    public void getCidade () throws DataException{
+        int escolhaUsuario;
         System.out.println("Escolha a cidade:");
         for (Cidade c: cidades){
             System.out.println(cidades.indexOf(c) + ". "+ c.getNomeCidade());
         };
-        int escolhaUsuario;
         Scanner scan = new Scanner(System.in);
         escolhaUsuario = scan.nextInt();
-
+        if (escolhaUsuario >= cidades.size()){
+            throw new DataException("Esse número não é válido. Tente de novo!");
+        }
+        System.out.println("Você escolheu a cidade " + escolhaUsuario);
     }
+
+//    public void validaEscolhaUsuario () throws DataException{
+//
+//    }
 
     public void addCidade(Cidade cidade){
         cidades.add(cidade);
